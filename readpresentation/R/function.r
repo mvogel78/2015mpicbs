@@ -5,9 +5,10 @@ read.file <- function(file,skip,verbose=T){
                       fill=T)
     
     tmp <- tmp[!is.na(tmp$Subject),] 
-    
-    if(sum(str_detect(tmp[,1],"CH|GA|IJ|Kj|RMK"))) print(paste("id",tmp[3,1]))
 
+    if(sum(!str_detect(tmp$Subject,"^0[012][0-9]_[1-8]$|^0[012][0-9]_test[12]$")))
+        print(paste("id",tmp$Subject[1]))
+    
     if(sum(tmp$Stim.Type %in% c("hit","incorrect"))==0) return(NULL)
 
     tmp <- lapply(tmp,function(x) {
