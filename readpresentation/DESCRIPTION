@@ -1,9 +1,10 @@
 Package: readpresentation
+Imports: stringr
 Type: Package
-Title: What the package does (short line)
+Title: Functions to read in a presentation file
 Version: 1.0
 Date: 2015-03-15
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Mandy Vogel
+Maintainer: Mandy Vogel <mandy.vogel@googlemail.com>
+Description: functions created in context of a introductory R course March 2015 to read in presentation file. These functions does not work with presentation files in general.
+License: GPL-2
